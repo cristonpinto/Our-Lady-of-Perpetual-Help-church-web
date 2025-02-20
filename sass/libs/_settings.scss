@@ -1,0 +1,26 @@
+// Font family
+$primary-font: "Cormorant Garamond", "Playfair Display", serif; // Traditional Catholic aesthetic
+$secondary-font: "Raleway", "Open Sans", sans-serif; // Clean modern complement
+
+// Color Variables - Marian Symbolism
+$marian-blue: #000080;       // Traditional Marian blue
+$celestial-gold: #FFD700;    // Byzantine gold
+$divine-white: #F8F9FA;      // Pure white for contrast
+$royal-purple: #4B0082;      // Liturgical accent
+
+$accent-color: $celestial-gold;
+$primary-color: $marian-blue;
+$secondary-color: darken($marian-blue, 15%); // #000033
+
+$strong-color: mix($marian-blue, #000, 30%); // #00004D
+$body-color: desaturate(darken($marian-blue, 40%), 20%); // #191933
+$muted-color: transparentize($marian-blue, 0.6); // rgba(0,0,128,0.4)
+$border-color: lighten($marian-blue, 40%); // #6666FF
+
+// Gradient Variables
+$gradient-marian: linear-gradient(150deg, $marian-blue 0%, $royal-purple 100%);
+$gradient-gold: linear-gradient(45deg, $celestial-gold 0%, darken($celestial-gold, 15%) 100%);
+
+// Grid system (unchanged)
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
