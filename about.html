@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Our Lady of Perpetual Help church - About</title>
+
+		<!-- Loading third party fonts -->
+		<link href="fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            .menu-container {
+                width: 100%;
+                max-width: 400px;
+                background-color: #f8f8f8;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+    
+            .menu-title {
+                color: #992832;
+                font-size: 24px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+    
+            .menu-list {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+    
+            .menu-item {
+                margin-bottom: 10px;
+            }
+    
+            .menu-link {
+                display: block;
+                padding: 12px 15px;
+                text-decoration: none;
+                color: #555;
+                background-color: #fff;
+                font-size: 16px;
+                border-radius: 6px;
+                transition: all 0.3s ease;
+                text-align: left;
+                width: 100%;
+            }
+    
+            .menu-link.active {
+                color: #fff;
+                background-color: #992832;
+            }
+    
+            .menu-link:hover {
+                background-color: #f0f0f0;
+                transform: translateX(5px);
+            }
+    
+            .menu-link.active:hover {
+                background-color: #7c202a;
+            }
+    
+            /* Mobile menu button */
+            .mobile-menu-button {
+                display: none;
+                width: 100%;
+                padding: 10px;
+                background-color: #992832;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+                margin-bottom: 10px;
+            }
+    
+            /* Media Queries */
+            @media screen and (max-width: 768px) {
+                .menu-container {
+                    padding: 10px;
+                    width: 100%;
+                }
+    
+                .mobile-menu-button {
+                    display: block;
+                }
+    
+                .menu-list {
+                    display: none;
+                }
+    
+                .menu-list.show {
+                    display: block;
+                }
+    
+                .menu-link {
+                    padding: 15px;
+                    font-size: 18px; /* Larger touch targets for mobile */
+                }
+            }
+        </style>
+
+	</head>
+
+
+	<body>
+		<div class="site-content">
+			<!-- Create a placeholder div to measure when navigation should stick -->
+			<div id="nav-placeholder"></div>
+			
+			<header class="site-header">
+				<div class="container">
+					<a href="#" class="branding">
+						<img src="images/logo1.png" alt="" class="logo">
+						<h1 class="site-title">Our Lady of Perpetual Help church</h1>
+					</a>
+				</div>
+			</header>
+	
+			<div class="main-navigation" style="width: 100%; background-color: #333; top: 0; left: 0; z-index: 1000;">
+				<div class="container" style="width: 100%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 20px;">
+					<button class="menu-toggle" style="background: none; border: none; color: rgb(255, 255, 255); font-size: 20px; display: none;">
+						<i class="fa fa-bars"></i> Menu
+					</button>
+					<ul class="menu" style="list-style: none; display: flex; gap: 33px; padding: 0; margin: 0;">
+						<li class="menu-item"><a href="index.html" class="nav-link" style="text-decoration: none; color: white; font-size: 16px; font-weight: bold; padding: 10px 15px; display: block; transition: 0.3s;">Home</a></li>
+						<li class="menu-item"><a href="about.html" class="nav-link" style="text-decoration: none; color: white; font-size: 17px; font-weight:600; padding: 10px 15px; display: block; transition: 0.3s;">About</a></li>
+						<li class="menu-item"><a href="seremons.html" class="nav-link" style="text-decoration: none; color: white; font-size: 16px; font-weight: 600; padding: 10px 15px; display: block; transition: 0.3s;">How We Serve</a></li>
+						<li class="menu-item"><a href="events.html" class="nav-link" style="text-decoration: none; color: white; font-size: 16px; font-weight: 600; padding: 10px 15px; display: block; transition: 0.3s;">Faith Formation</a></li>
+						<li class="menu-item"><a href="families.html" class="nav-link" style="text-decoration: none; color: white; font-size: 17px; font-weight: 600; padding: 10px 15px; display: block; transition: 0.3s;">Sacraments</a></li>
+						<li class="menu-item"><a href="youth.html" class="nav-link" style="text-decoration: none; color: white; font-size: 17px; font-weight: 600; padding: 10px 15px; display: block; transition: 0.3s;">Youth</a></li>
+						<li class="menu-item"><a href="news.html" class="nav-link" style="text-decoration: none; color: white; font-size: 17px; font-weight: 600; padding: 10px 15px; display: block; transition: 0.3s;">News & Information</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<script>
+				// Get the current page URL
+				const currentPage = window.location.pathname.split('/').pop();
+			
+				// Select all navigation links
+				const navLinks = document.querySelectorAll('.nav-link');
+			
+				// Loop through each link and check if it matches the current page
+				navLinks.forEach(link => {
+					if (link.getAttribute('href') === currentPage) {
+						link.parentElement.classList.add('current-menu-item');
+						link.style.borderBottom = "3px solid #ffcc00"; // Highlight active menu item
+					} else {
+						link.parentElement.classList.remove('current-menu-item');
+					}
+				});
+			</script>
+			
+			<div class="page-head" data-bg-image="images/page-head-1.jpg">
+				<div class="container">
+					<h2 class="page-title">About</h2>
+				</div>
+			</div>
+
+			<main style="width: 85%; margin: 0 auto; padding: 20px;">
+                <div style="display: flex; gap: 30px;">
+                    <div class="menu-container">
+                        <button class="mobile-menu-button">☰ Menu</button>
+                        <h3 class="menu-title">Our Parish</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link active" data-content="parish-info">Parish Information</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link" data-content="mission-values">Mission and Values</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link" data-content="history">History</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link" data-content="leadership-staff">Parish Leadership & Staff</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link" data-content="mass-times">Mass Times</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link" data-content="tithes">Tithes and Offerings</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <script>
+                        // Mobile menu toggle functionality
+                        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+                        const menuList = document.querySelector('.menu-list');
+                
+                        mobileMenuButton.addEventListener('click', () => {
+                            menuList.classList.toggle('show');
+                        });
+                
+                        // Handle menu item clicks
+                        const menuLinks = document.querySelectorAll('.menu-link');
+                        menuLinks.forEach(link => {
+                            link.addEventListener('click', (e) => {
+                                // Remove active class from all links
+                                menuLinks.forEach(l => l.classList.remove('active'));
+                                // Add active class to clicked link
+                                e.target.classList.add('active');
+                                
+                                // On mobile, close the menu after selection
+                                if (window.innerWidth <= 768) {
+                                    menuList.classList.remove('show');
+                                }
+                            });
+                        });
+                    </script>
+                    <!-- Right Content Area -->
+                    <div style="width: 70%; background-color: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <div id="content-area">
+                            <h2 style="color: #992832; margin-bottom: 20px; font-size: 28px;">Parish Information</h2>
+                            <p style="line-height: 1.6; font-size: 16px; color: #333; margin-bottom: 20px;">
+                                Welcome to Our Lady of Perpetual Help Catholic Church, affectionately known as "The Church on The Hill." We are a Roman Catholic Community serving the Black Catholics of Washington DC for more than 100 years! Our rich cultural legacy and vibrant faith community make us a unique part of the Anacostia neighborhood.
+                            </p>
+                            <p style="line-height: 1.6; font-size: 16px; color: #333; margin-bottom: 30px;">
+                                Our parish office is open Monday through Thursday from 9:00 AM to 4:00 PM. We welcome visitors and new parishioners to join us for Mass and participate in our various ministries and community outreach programs.
+                            </p>
+                    
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                                <div style="background-color: #f8f8f8; padding: 20px; border-radius: 6px;">
+                                    <h3 style="color: #992832; margin-bottom: 15px;">Contact Information</h3>
+                                    <p style="margin-bottom: 10px;">1600 Morris Road SE</p>
+                                    <p style="margin-bottom: 10px;">Washington, DC 20020</p>
+                                    <p style="margin-bottom: 10px;">Phone: (202) 678-4999</p>
+                                    <p style="margin-bottom: 10px;">Email: info@olphsedc.com</p>
+                                    <p style="margin-bottom: 10px;">Website: www.olphsedc.com</p>
+                                </div>
+                    
+                                <div style="background-color: #f8f8f8; padding: 20px; border-radius: 6px;">
+                                    <h3 style="color: #992832; margin-bottom: 15px;">Parish Leadership</h3>
+                                    <div style="margin-bottom: 15px;">
+                                        <p style="font-weight: bold; margin-bottom: 5px;">Pastor</p>
+                                        <p style="margin-bottom: 5px;">Rev. Michael Thompson, SSJ</p>
+                                        <p style="margin-bottom: 5px">Email: pastor@olphsedc.com</p>
+                                    </div>
+                                    <div>
+                                        <p style="font-weight: bold; margin-bottom: 5px;">Parish Secretary</p>
+                                        <p style="margin-bottom: 5px">Mrs. Denise Boxley</p>
+                                        <p>Email: office@olphsedc.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div style="background-color: #992832; color: white; padding: 20px; border-radius: 6px; margin-bottom: 30px; cursor: pointer;" onclick="document.querySelector('[data-content=\'mass-times\']').click()">
+                                <h3 style="color: white; margin-bottom: 10px;">Mass Times</h3>
+                                <p style="margin-bottom: 5px;">Saturday: 4:30 PM (English)</p>
+                                <p style="margin-bottom: 5px;">Sunday: 10:00 AM (English)</p>
+                                <p style="margin-bottom: 5px;">Monday - Thursday: 8:00 AM (English)</p>
+                                <p style="font-style: italic; margin-top: 10px;">Click to view full schedule</p>
+                            </div>
+                    
+                            <div style="margin-bottom: 30px;">
+                                <h3 style="color: #992832; margin-bottom: 15px;">Where to Find Us</h3>
+                                <div style="width: 100%; height: 400px; border-radius: 6px; overflow: hidden;">
+                                    <iframe 
+                                        src="https://maps.app.goo.gl/7X4VTcebPdgMioiC8"
+                                        width="100%"
+                                        height="100%"
+                                        style="border:0;"
+                                        allowfullscreen=""
+                                        loading="lazy">
+                                    </iframe>
+                                </div>
+                                <p style="margin-top: 10px; font-size: 14px; color: #666;">
+                                    We are located in Southeast Washington, DC, with convenient access from I-295 and Suitland Parkway.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const menuLinks = document.querySelectorAll('.menu-link');
+                    const contentArea = document.getElementById('content-area');
+        
+                    menuLinks.forEach(link => {
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            
+                            // Remove active class from all links
+                            menuLinks.forEach(l => {
+                                l.style.backgroundColor = '#fff';
+                                l.style.color = '#555';
+                            });
+        
+                            // Add active class to clicked link
+                            this.style.backgroundColor = '#992832';
+                            this.style.color = '#fff';
+        
+                            // Update content based on selection
+                            const content = this.getAttribute('data-content');
+                            updateContent(content);
+                        });
+                    });
+        
+                    function updateContent(content) {
+                        let newContent = '';
+                        switch(content) {
+                            case 'parish-info':
+                                newContent = `
+                                    <h2 style="color: #992832; margin-bottom: 20px; font-size: 28px;">Parish Information</h2>
+<p style="line-height: 1.6; font-size: 16px; color: #333; margin-bottom: 20px;">
+    Welcome to Our Lady of Perpetual Help Catholic Church, affectionately known as "The Church on The Hill." We are a Roman Catholic Community serving the Black Catholics of Washington DC for more than 100 years! Our rich cultural legacy and vibrant faith community make us a unique part of the Anacostia neighborhood.
+</p>
+<p style="line-height: 1.6; font-size: 16px; color: #333; margin-bottom: 30px;">
+    Our parish office is open Monday through Thursday from 9:00 AM to 4:00 PM. We welcome visitors and new parishioners to join us for Mass and participate in our various ministries and community outreach programs.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 6px;">
+        <h3 style="color: #992832; margin-bottom: 15px;">Contact Information</h3>
+        <p style="margin-bottom: 10px;">1600 Morris Road SE</p>
+        <p style="margin-bottom: 10px;">Washington, DC 20020</p>
+        <p style="margin-bottom: 10px;">Phone: (202) 678-4999</p>
+        <p style="margin-bottom: 10px;">Email: info@olphsedc.com</p>
+        <p style="margin-bottom: 10px;">Website: www.olphsedc.com</p>
+    </div>
+
+    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 6px;">
+        <h3 style="color: #992832; margin-bottom: 15px;">Parish Leadership</h3>
+        <div style="margin-bottom: 15px;">
+            <p style="font-weight: bold; margin-bottom: 5px;">Pastor</p>
+            <p style="margin-bottom: 5px;">Rev. Michael Thompson, SSJ</p>
+            <p style="margin-bottom: 5px">Email: pastor@olphsedc.com</p>
+        </div>
+        <div>
+            <p style="font-weight: bold; margin-bottom: 5px;">Parish Secretary</p>
+            <p style="margin-bottom: 5px">Mrs. Denise Boxley</p>
+            <p>Email: office@olphsedc.com</p>
+        </div>
+    </div>
+</div>
+
+<div style="background-color: #992832; color: white; padding: 20px; border-radius: 6px; margin-bottom: 30px; cursor: pointer;" onclick="document.querySelector('[data-content=\'mass-times\']').click()">
+    <h3 style="color: white; margin-bottom: 10px;">Mass Times</h3>
+    <p style="margin-bottom: 5px;">Saturday: 4:30 PM (English)</p>
+    <p style="margin-bottom: 5px;">Sunday: 10:00 AM (English)</p>
+    <p style="margin-bottom: 5px;">Monday - Thursday: 8:00 AM (English)</p>
+    <p style="font-style: italic; margin-top: 10px;">Click to view full schedule</p>
+</div>
+
+<div style="margin-bottom: 30px;">
+    <h3 style="color: #992832; margin-bottom: 15px;">Where to Find Us</h3>
+    <div style="width: 100%; height: 400px; border-radius: 6px; overflow: hidden;">
+        <iframe 
+            src="https://www.google.com/maps/dir//4X72%2B566,+Gampaha/@7.112905,79.8681055,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ae2faf7d11752bf:0x50765b035c90c107!2m2!1d79.950576!2d7.1128922?entry=ttu&g_ep=EgoyMDI1MDIxOC4wIKXMDSoASAFQAw%3D%3D"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+    <p style="margin-top: 10px; font-size: 14px; color: #666;">
+        We are located in Southeast Washington, DC, with convenient access from I-295 and Suitland Parkway.
+    </p>
+</div>`;
+                                break;
+                            case 'mission-values':
+                                newContent = `
+                                    <h2 style="color: #992832; margin-bottom: 20px; font-size: 28px;">Mission and Values</h2>
+                                    <p style="line-height: 1.6; font-size: 16px; color: #333; margin-bottom: 20px;">
+                                        Our mission is to spread the Gospel of Jesus Christ and serve our community through worship, education, and charitable works.
+                                    </p>`;
+                                break;
+                            // Add more cases for other menu items
+                        }
+                        contentArea.innerHTML = newContent;
+                    }
+                });
+            </script>
+
+			<footer class="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="widget">
+								<h3 class="widget-title">Our address</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi perspiciatis magnam, ab ipsa laboriosam tempore tenetur, aliquid repellat, ex cum dicta reiciendis accusamus. Omnis repudiandae quasi mollitia, iusto odio dignissimos.</p>
+								<ul class="address">
+									<li><i class="fa fa-map-marker"></i> 329 Church St, Garland, TX 75042</li>
+									<li><i class="fa fa-phone"></i> (425) 853 442 552</li>
+									<li><i class="fa fa-envelope"></i> info@yourchurch.com</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="widget">
+								<h3 class="widget-title">Topics from last meeting</h3>
+								<ul class="bullet">
+									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+									<li><a href="#">Consectetur adipisicing elit quis nostrud</a></li>
+									<li><a href="#">Eiusmod tempor incididunt ut labore et dolore magna</a></li> 
+									<li><a href="#">Ut enim ad minim veniam cillum</a></li>
+									<li><a href="#">Exercitation ullamco laboris nisi ut aliquip</a></li> 
+									<li><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="widget">
+								<h3 class="widget-title">Contact form</h3>
+								<form action="#" class="contact-form">
+									<div class="row">
+										<div class="col-md-6"><input type="text" placeholder="Your name..."></div>
+										<div class="col-md-6"><input type="text" placeholder="Email..."></div>
+									</div>
+									
+									<textarea name="" placeholder="Your message..."></textarea>
+									<div class="text-right"><input type="submit" value="Send message"></div>
+									
+								</form>
+							</div>
+						</div>
+					</div> <!-- .row -->
+
+					<p class="colophon">Copyright 2014 True Church. All right reserved</p>
+				</div><!-- .container -->
+			</footer> <!-- .site-footer -->
+
+		</div>
+		
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+		<script>
+			
+			const dynamicContent = document.getElementById('dynamic-content');
+
+			// Example content for each section
+			
+
+			// Add click event listener to each menu link
+			menuLinks.forEach(link => {
+				link.addEventListener('click', (e) => {
+					e.preventDefault();
+
+					// Remove active class from all links
+					menuLinks.forEach(link => link.classList.remove('active'));
+
+					// Add active class to clicked link
+					e.target.classList.add('active');
+
+					// Update dynamic content based on selected menu item
+					const contentKey = e.target.getAttribute('data-content');
+					dynamicContent.innerHTML = contentData[contentKey];
+				});
+			});
+		</script>
+	</body>
+
+</html>
